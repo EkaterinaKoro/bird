@@ -1,15 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        BmiService service = new BmiService();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        double weight1 = 98;
+        double height1 = 1.87;
+        int bmi1 = service.calculate(weight1, height1);
+        System.out.println("Weight: " + weight1 + " kg, Height: " + height1 + " m -> BMI: " + bmi1);
+
+        double weight2 = 88;
+        double height2 = 1.66;
+        int bmi2 = service.calculate(weight2, height2);
+        System.out.println("Weight: " + weight2 + " kg, Height: " + height2 + " m -> BMI: " + bmi2);
+
+        double weight3 = 90;
+        double height3 = 1.55;
+        int bmi3 = service.calculate(weight3, height3);
+        System.out.println("Weight: " + weight3 + " kg, Height: " + height3 + " m -> BMI: " + bmi3);
     }
 }
